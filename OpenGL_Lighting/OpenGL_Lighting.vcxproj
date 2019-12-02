@@ -70,12 +70,12 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>D:\OpenGL\Libraries\Includes;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\OpenGL\Libraries\Libs;$(LibraryPath)</LibraryPath>
+    <IncludePath>D:\OpenGL Libraries\Libraries\Includes;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\OpenGL Libraries\Libraries\Libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>D:\OpenGL\Libraries\Includes;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\OpenGL\Libraries\Libs;$(LibraryPath)</LibraryPath>
+    <IncludePath>D:\OpenGL Libraries\Libraries\Includes;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\OpenGL Libraries\Libraries\Libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
