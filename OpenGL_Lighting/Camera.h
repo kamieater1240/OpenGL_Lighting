@@ -12,7 +12,9 @@ enum Camera_Movement {
 	FORWARD,
 	BACKWARD,
 	LEFT,
-	RIGHT
+	RIGHT,
+	UP,
+	DOWN,
 };
 
 // Default camera values
@@ -72,6 +74,7 @@ public:
 		float velocity = MovementSpeed * deltaTime;
 		glm::vec3 horizontalFront = glm::normalize(glm::vec3(Front.x, 0.0f, Front.z));
 		glm::vec3 horizontalRight = glm::normalize(glm::vec3(Right.x, 0.0f, Right.z));
+		glm::vec3 verticalUp = glm::normalize(glm::vec3(0.0f, Up.y, 0.0f));
 
 		if (direction == FORWARD)
 			Position += horizontalFront * velocity;
@@ -81,6 +84,10 @@ public:
 			Position -= horizontalRight * velocity;
 		if (direction == RIGHT)
 			Position += horizontalRight * velocity;
+		if (direction == UP)
+			Position += verticalUp * velocity;
+		if (direction == DOWN)
+			Position -= verticalUp * velocity;
 	}
 
 	// Processes input received from a mouse input system. Expects the offset value in both the x and y direction.
