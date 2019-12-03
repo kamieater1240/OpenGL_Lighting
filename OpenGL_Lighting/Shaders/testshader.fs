@@ -61,23 +61,23 @@ vec3 CalcSpotLight(SpotLight light, vec3 normal, vec3 fragPos, vec3 viewDir);
 void main()
 {
 	// define an output color value
-	vec3 output = vec3(0.0);
+	vec3 result = vec3(0.0);
 	
 	//some attributes
 	vec3 norm = normalize(Normal);
 	vec3 viewDir = normalize(viewPos - FragPos);
 	
 	// add the directional light's contribution to the output
-	//output += CalcDirLight(dirLight, norm, viewDir);
+	//result += CalcDirLight(dirLight, norm, viewDir);
 	
 	// do the same for all point lights
 	for(int i = 0; i < NR_POINT_LIGHTS; i++)
-		//output += CalcPointLight(pointLights[i], norm, FragPos, viewDir);
+		//result += CalcPointLight(pointLights[i], norm, FragPos, viewDir);
 	
 	// and add others lights as well (like spotlights)
-	output += CalcSpotLight(spotLight, norm, FragPos, viewDir);
+	result += CalcSpotLight(spotLight, norm, FragPos, viewDir);
 	
-	FragColor = vec4(output, 1.0f);
+	FragColor = vec4(result, 1.0f);
 }
 
 vec3 CalcDirLight(DirLight light, vec3 normal, vec3 viewDir){

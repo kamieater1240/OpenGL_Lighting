@@ -85,7 +85,7 @@ int main()
 
 	// build and compile our shader zprogram
 	// ------------------------------------
-	ourShader.reload("Shaders/testShader.vs", "Shaders/testShader.fs");
+	ourShader.reload("Shaders/testshader.vs", "Shaders/testshader.fs");
 
 	Shader lightShader("Shaders/lightShader.vs", "Shaders/lightShader.fs");
 
@@ -238,9 +238,9 @@ int main()
 		//--------------------------------------------------------------------------------------------
 		// directional light
 		ourShader.setVec3("dirLight.direction", -0.2f, -1.0f, -0.3f);
-		ourShader.setVec3("dirLight.ambient", 0.05f, 0.05f, 0.05f);
-		ourShader.setVec3("dirLight.diffuse", 0.4f, 0.4f, 0.4f);
-		ourShader.setVec3("dirLight.specular", 0.5f, 0.5f, 0.5f);
+		ourShader.setVec3("dirLight.ambient", 0.2f, 0.2f, 0.2f);
+		ourShader.setVec3("dirLight.diffuse", 0.5f, 0.5f, 0.5f);
+		ourShader.setVec3("dirLight.specular", 1.0f, 1.0f, 1.0f);
 		// point light 1
 		ourShader.setVec3("pointLights[0].position", pointLightPositions[0]);
 		ourShader.setVec3("pointLights[0].ambient", 0.05f, 0.05f, 0.05f);
